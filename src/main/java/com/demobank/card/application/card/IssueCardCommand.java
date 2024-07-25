@@ -1,6 +1,5 @@
-package com.demobank.card.application.loan;
+package com.demobank.card.application.card;
 
-import java.math.BigDecimal;
 import java.math.BigInteger;
 
 import lombok.AllArgsConstructor;
@@ -16,10 +15,8 @@ import lombok.ToString;
 @NoArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class DebitAmountFromCardCommand {
-
+public class IssueCardCommand {
     private BigInteger cardNumber;
-    private BigDecimal amount;
-    private String currencyCode;
-
+    private String cardType;
+    private String balanceCurrencyCode;
 }

@@ -4,7 +4,10 @@ import org.jmolecules.ddd.annotation.AggregateRoot;
 
 import com.demobank.card.domain.model.account.AccountId;
 import com.demobank.card.domain.model.common.BaseAggregateRoot;
+
 import jakarta.annotation.Nullable;
+import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.AttributeOverrides;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
@@ -33,6 +36,11 @@ public class Card extends BaseAggregateRoot<Card, CardNumber> {
     private CardNumber cardNumber;
     private CardType cardType;
     @Embedded
+    @AttributeOverrides({
+        @AttributeOverride(
+            name="id", 
+            column=@jakarta.persistence.Column(name="account_id"))
+    })
     private AccountId accountId;
     public Card(CardNumber cardNumber, CardType cardType, AccountId accountId) {
         super();

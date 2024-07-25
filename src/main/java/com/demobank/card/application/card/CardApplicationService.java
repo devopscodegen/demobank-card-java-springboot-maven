@@ -1,4 +1,4 @@
-package com.demobank.card.application.loan;
+package com.demobank.card.application.card;
 
 import org.jmolecules.architecture.hexagonal.Application;
 import org.springframework.beans.factory.annotation.Autowired;

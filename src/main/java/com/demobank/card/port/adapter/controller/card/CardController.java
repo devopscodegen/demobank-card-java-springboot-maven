@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.demobank.card.application.loan.CardApplicationService;
-import com.demobank.card.application.loan.DebitAmountFromCardCommand;
-import com.demobank.card.application.loan.IssueCardCommand;
+import com.demobank.card.application.card.CardApplicationService;
+import com.demobank.card.application.card.DebitAmountFromCardCommand;
+import com.demobank.card.application.card.IssueCardCommand;
 import com.demobank.card.domain.model.account.transaction.Transaction;
 import com.demobank.card.domain.model.card.Card;
 import com.demobank.card.port.adapter.controller.card.transaction.TransactionRequest;

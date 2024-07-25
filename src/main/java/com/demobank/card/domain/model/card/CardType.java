@@ -5,29 +5,29 @@ import com.demobank.card.domain.model.common.BaseValueObject;
 public enum CardType implements BaseValueObject{
 
     DEBIT {
-        public boolean isdebitAmountFromCard() {
+        public boolean isDebit() {
             return true;
         }
     },
 
     CREDIT {
-        public boolean iscreditAmountToAccount() {
+        public boolean isCredit() {
             return true;
         }
     };
 
-    public boolean isdebitAmountFromCard() {
+    public boolean isDebit() {
         return false;
     }
 
-    public boolean iscreditAmountToAccount() {
+    public boolean isCredit() {
         return false;
     }
 
     public CardType regress() {
-        if (this.isdebitAmountFromCard()) {
+        if (this.isDebit()) {
             return DEBIT;
-        } else if (this.iscreditAmountToAccount()) {
+        } else if (this.isCredit()) {
             return CREDIT;
         }
 
